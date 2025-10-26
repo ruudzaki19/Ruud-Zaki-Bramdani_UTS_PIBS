@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="profile-photo">
+        <img src="profil mahasiswa.jpeg" alt="Profile Photo">
+      </div>
+      <h1>Profil Mahasiswa</h1>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <div class="main-container">
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar-nav">
+      <nav>
+        <ul>
+          <li><a href="#" class="nav-link active" data-section="biodata">Biodata</a></li>
+          <li><a href="#" class="nav-link" data-section="pendidikan">Pendidikan</a></li>
+          <li><a href="#" class="nav-link" data-section="pengalaman">Pengalaman</a></li>
+          <li><a href="#" class="nav-link" data-section="keahlian">Keahlian</a></li>
+          <li><a href="#" class="nav-link" data-section="publikasi">Publikasi</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT SECTION -->
+    <section class="main-section" id="mainContent">
+      <div class="section-header">
+        <h2>Biodata</h2>
+      </div>
+      <div class="content-wrapper">
+        <div class="info-row">
+          <span class="label">NIM:</span>
+          <span class="value">2024081028</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Nama:</span>
+          <span class="value">Ruud Zaki Bramdani</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Agama:</span>
+          <span class="value">Islam</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Tanggal Lahir:</span>
+          <span class="value">19 Juni 2006</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Tempat Lahir:</span>
+          <span class="value">Tangerang</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASIDE HOBI -->
+    <aside class="sidebar-hobi">
+      <div class="hobi-header">
+        <h3>Hobi:</h3>
+      </div>
+      <ul class="hobi-list">
+        <li>Futsal</li>
+        <li>Bermain Layangan</li>
+        <li>Nonton Film</li>
+        <li>Mendengarkan Musik</li>
+        <li>Coding</li>
+      </ul>
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>Twitter: <a href="https://x.com/rufkaki" target="_blank" rel="noopener noreferrer">@rufkaki</a></p>
+        <p>FB: <a href="https://www.facebook.com/ruud.zaki" target="_blank" rel="noopener noreferrer">@ruud.zaki</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/rutjaki/" target="_blank" rel="noopener noreferrer">@rutjaki</a></p>
+      </div>
+      <div class="footer-center">
+        <p>© Copyright 2025. All Rights Reserved</p>
+      </div>
+      <div class="footer-right">
+        <p class="footer-name">Ruud Zaki Bramdani</p>
+        <p class="footer-slogan">Never Give Up</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mainContent = document.getElementById('mainContent');
+
+    const contentData = {
+      biodata: {
+        title: 'Biodata',
+        content: `
+          <div class="info-row">
+            <span class="label">NIM:</span>
+            <span class="value">2024081028</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Nama:</span>
+            <span class="value">Ruud Zaki Bramdani</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Agama:</span>
+            <span class="value">Islam</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Tanggal Lahir:</span>
+            <span class="value">19 Juni 2006</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Tempat Lahir:</span>
+            <span class="value">Tangerang</span>
+          </div>
+        `
+      },
+      pendidikan: {
+        title: 'Pendidikan',
+        content: `
+          <ul class="content-list">
+            <li>S1 Sistem Informasi — Universitas Pembangunan Jaya (2024-Sekarang)</li>
+            <li>SMAN 2 Tangerang Selatan</li>
+            <li>SMP IT Insan Harapan</li>
+            <li>SDN Puspiptek</li>
+            <li>TK Nurul Irfan</li>
+          </ul>
+        `
+      },
+      pengalaman: {
+        title: 'Pengalaman',
+        content: `
+          <ul class="content-list">
+            <li>Panitia acara kemerdekaan SMAN 2 Tangerang Selatan</li>
+            <li>Panitia acara kemerdekaan lingkungan rumah</li>
+            <li>Koordinator perlengkapan event Concordia tingkat kampus</li>
+            <li>Panitia konsumsi acara orientasi mahasiswa</li>
+          </ul>
+        `
+      },
+      keahlian: {
+        title: 'Keahlian',
+        content: `
+          <ul class="content-list">
+            <li>HTML, CSS</li>
+            <li>Desain Grafis</li>
+            <li>Mampu berorganisasi</li>
+            <li>Mengatasi dan mengatur sebuah event</li>
+          </ul>
+        `
+      },
+      publikasi: {
+        title: 'Publikasi',
+        content: `
+          <ul class="content-list">
+            <li>Paper Machine Learning</li>
+          </ul>
+        `
+      }
+    };
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        
+        const section = this.getAttribute('data-section');
+        const data = contentData[section];
+        
+        mainContent.innerHTML = `
+          <div class="section-header">
+            <h2>${data.title}</h2>
+          </div>
+          <div class="content-wrapper">
+            ${data.content}
+          </div>
+        `;
+      });
+    });
+  </script>
+</body>
+</html>
